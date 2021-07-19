@@ -7,12 +7,15 @@ class Entry extends StatelessWidget {
   final String hintText;
   final TextEditingController text_controller;
   final String? errorText;
-  Entry(
-      {required this.onSubmit,
-      required this.header,
-      required this.hintText,
-      required this.text_controller,
-      this.errorText});
+  bool to_obscure;
+  Entry({
+    required this.onSubmit,
+    required this.header,
+    required this.hintText,
+    required this.text_controller,
+    this.errorText,
+    required this.to_obscure,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,10 @@ class Entry extends StatelessWidget {
           SizedBox(height: 10),
           TextField(
             controller: text_controller,
-            onSubmitted: this.onSubmit,
+            //onSubmitted: this.onSubmit,
+            onChanged: this.onSubmit,
+            obscureText: to_obscure,
+            obscuringCharacter: '*',
             decoration: InputDecoration(
               fillColor: kEntryFillColor,
               filled: true,

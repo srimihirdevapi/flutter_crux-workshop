@@ -58,6 +58,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 header: 'ID Number',
                 hintText: kHintText_ID,
                 text_controller: controller_ID,
+                to_obscure: false,
               ),
 
               // Password
@@ -73,6 +74,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 header: 'Password',
                 hintText: kHintText_pwd,
                 text_controller: controller_pwd,
+                to_obscure: true,
               ),
 
               // Batch

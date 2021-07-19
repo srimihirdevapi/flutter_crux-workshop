@@ -46,6 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                   header: 'ID Number',
                   hintText: kHintText_ID,
                   errorText: error_ID,
+                  to_obscure: false,
                   onSubmit: (String value) {
                     setState(() {
                       ID_Number = value;
@@ -64,6 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                   header: 'Password',
                   hintText: kHintText_pwd,
                   errorText: error_pwd,
+                  to_obscure: true,
                   onSubmit: (String value) {
                     setState(() {
                       password = value;
